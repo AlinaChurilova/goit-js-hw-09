@@ -16,3 +16,27 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer{
+  display: flex;
+  margin-top: 10px;
+}
+
+span{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.14;
+    color: #212121;
+}
+
+span.value{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8px;
+}
