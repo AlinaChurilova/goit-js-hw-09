@@ -10,11 +10,12 @@ startBtn.addEventListener("click", onStartBtnClick);
 stopBtn.addEventListener("click", onStopBtnClick);
 
 function onStartBtnClick() {
-
+  startBtn.setAttribute("disabled", "true");
+  stopBtn.removeAttribute("disabled");
   timerId = setInterval(() => {
       body.style.backgroundColor = getRandomHexColor();
-      startBtn.setAttribute("disabled", "true");
-      stopBtn.removeAttribute("disabled");
+      // startBtn.setAttribute("disabled", "true");
+      // stopBtn.removeAttribute("disabled");
     }, BODY_DELAY);
     
 };

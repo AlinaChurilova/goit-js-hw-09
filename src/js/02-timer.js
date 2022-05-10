@@ -3,11 +3,13 @@ import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
 const startBtn = document.querySelector('button[data-start]');
+const input = document.querySelector("#datetime-picker");
 const day = document.querySelector('[data-days]');
 const hour = document.querySelector('[data-hours]');
 const minute = document.querySelector('[data-minutes]');
 const second = document.querySelector('[data-seconds]');
 let selectedDate;
+
 
 startBtn.disabled = true;
  
@@ -64,7 +66,10 @@ startBtn.addEventListener("click", onStartBtnClick);
 
 function onStartBtnClick() {
 
-    timer.start();  
+    timer.start(); 
+    startBtn.disabled = true;
+    input.disabled = true;
+
 };
 
 function addLeadingZero(value) {
